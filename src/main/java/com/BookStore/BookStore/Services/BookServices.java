@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
+
 
 @Service
 public class BookServices {
@@ -28,6 +28,7 @@ public class BookServices {
                return new ResponseEntity<>(book, HttpStatus.OK);
     }
     public Iterable<Book> getAllBooks(){
+
         return bookRepository.findAll();
     }
     public void updateBookById(Long categoryId, Book book) {
